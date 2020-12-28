@@ -6,7 +6,7 @@ Main Repository for WooTech Mentorship Programme
 ### Mentees: Anmol Kaur, Chetna Gola, Namrata Das, Namya LG, Jahnvi Seth, Tanisha Pandey
 
 ## Abstract
-This is the repository that contains all the details and timeline to work with during the mentorship programme. The length of the mentorship is around 8 weeks. The project is all about doing Data Structures and Algorithms, they are very important to crack any interview. So students must be thorough with that and need guidance on how to proceed with them. Through this project, I want to guide my juniors so that they can get started with it easily. We will be learning all the concepts needed and practice a lot of questions. 
+This is the repository that contains all the details and timeline to work with during the mentorship programme. The length of the mentorship is around 8 weeks. The project is all about doing Data Structures and Algorithms, they are very important to crack any interview. So students must be thorough with that and need guidance on how to proceed with them. We will be learning all the concepts needed and practice a lot of questions. 
 
 ## Tech Stack
 C++
