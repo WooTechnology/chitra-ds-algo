@@ -6,6 +6,7 @@ int main(){
     int r, c;
     cin>>r>>c;
     int matrix[r][c];
+    int transpose[c][r];
     for(int i = 0; i < r; i++){
         vector<int> r;
         for(int j = 0; j < c; j++){
@@ -16,23 +17,14 @@ int main(){
     }
     for(int i = 0; i < r; i++){
         for(int j = 0; j < c; j++){
-            cout<<matrix[i][j]<<" ";
-        }
-        cout<<endl;
-      }
-    for(int i = 0; i < r; i++){
-        for(int j = 0; j < i; j++){
-            int t = matrix[i][j];
-            matrix[i][j] = matrix[j][i];
-            matrix[j][i] = t;
-
+            transpose[j][i] = matrix[i][j];
         }
     }
-      for(int i = 0; i < c; i++){
+    for(int i = 0; i < c; i++){
         for(int j = 0; j < r; j++){
-            cout<<matrix[i][j]<<" ";
+            cout<<transpose[i][j]<<" ";
         }
         cout<<endl;
-      }
+    }
     return 0;
 }
