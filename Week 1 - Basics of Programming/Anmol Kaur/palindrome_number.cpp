@@ -4,7 +4,7 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        if (x < 0 || ( x%10 == 0 && x!=0) ) return false;
+        if (x < 0 || ( x%10 == 0 && x!=0) ) return false; // checks for numbers like 0,10,20,30,.....300,220,......
             // if the reversed number is larger than int.MAX => integer overflow problem.
             // so we are neither reversing whole number nor converting it to string
             // rather checking right and left halves of number
@@ -19,3 +19,4 @@ public:
             // since the middle digit doesn't matter in palidrome(it will always equal to itself), we can simply get rid of it.
      }
 };
+
