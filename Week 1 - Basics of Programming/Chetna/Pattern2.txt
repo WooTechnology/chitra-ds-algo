@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int sp=2*n-3,k,i=1,j;
+        while(i<=n)
+        { j=1;k=0;
+        while(j<=i)
+        {
+           System.out.print(j);
+           j++;
+        }
+        j=j-1;
+        while(k<sp)
+        {
+                System.out.print(" ");
+                k++;
+        }
+        if(i==n)
+        j=n-1;
+        while(j>=1)
+        {
+            System.out.print(j);
+            j--;
+        }   
+        sp=sp-2;
+        i++;
+            System.out.println();
+      }    
+
+
+        
+        
+    }
+}
