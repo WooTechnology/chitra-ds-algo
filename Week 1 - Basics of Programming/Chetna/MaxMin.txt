@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int b=s.nextInt();
+        int c=s.nextInt();
+        int max=a,min=a;
+        if(max<b)
+        {max=b;
+          if(c<a)
+          min=c;
+        }
+        if(max<c)
+        {
+            max=c;
+            if(b<a)
+            min=b;
+        }  
+       if(max==a)
+       if(b<c)
+       min=b;
+       else
+       min=c;
+        System.out.println("Maximum Number="+max);
+        System.out.println("Minimum Number="+min);
+
+    }
+}
