@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+  int x,y,z;
+  cin>>x>>y>>z;
+  
+  int minNumFirst = min(x,y);
+  int minNum = min(minNumFirst,z);
+  
+  int maxNumFirst = max(x,y);
+  int maxNum = max(maxNumFirst,z);
+  
+  cout<<"minimum number:"<<minNum<<endl;
+  cout<<"maximum number:"<<maxNum<<endl;
+  
+  
+  return 0;
+}
