@@ -42,7 +42,8 @@ Doing Recursion and Backtracking
 Learning some concepts of Heaps, Tries and Hashmaps
 
 ### Week 7 
-Getting started with Dynamic Programming
+Doing basics of Trees and Graphs
 
 ### Week 8 
-Doing basics of Graphs
+Getting started with Dynamic Programming
+
