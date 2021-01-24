@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, oldNum, rem, ans = 0;
+    cin >> num;
+    oldNum = num;
+
+    while (oldNum != 0) {
+       
+        rem = oldNum % 10;
+        ans += rem * rem * rem;
+        oldNum /= 10;
+    }
+
+    if (ans == num)
+        cout << num << " is an Armstrong number.";
+    else
+        cout << num << " is not an Armstrong number.";
+
+    return 0;
+}
