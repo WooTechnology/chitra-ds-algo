@@ -1,0 +1,24 @@
+// product of array except self
+
+vector<long long int> productExceptSelf(vector<long long int>& nums, int n) {
+   
+     long long int p=1;
+        
+     vector<long long int> ans(n,1);
+        
+     for(long long int i=0;i<n;i++){ //left side
+         ans[i]=p;
+         p=p*nums[i];
+     }
+        
+        p=1;
+        
+    for(long long int i=n-1;i>=0;i--){ //right side
+         ans[i]*=p;
+         p=p*nums[i];
+     }
+        return ans;
+}
+
+//submitted on gfg
+//submission link: https://practice.geeksforgeeks.org/viewSol.php?subId=9c58092b763aeddbe057d5d4bb567475&pid=702020&user=jahnviseth30
