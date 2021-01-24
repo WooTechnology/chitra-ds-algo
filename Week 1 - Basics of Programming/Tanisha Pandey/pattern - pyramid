@@ -4,8 +4,7 @@ using namespace std;
 int main()
 {
     int space, rows;
-
-    cout <<"Enter number of rows: ";
+    
     cin >> rows;
 
     for(int i = 1, k = 0; i <= rows; ++i, k = 0)
