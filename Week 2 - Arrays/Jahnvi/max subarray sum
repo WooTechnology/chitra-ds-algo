@@ -1,0 +1,23 @@
+//max subarray sum
+// submitted on leetcode
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& arr) {
+    int n=arr.size();
+    int sum=0;
+    int ans= INT_MIN; //-infinity
+	
+	for(int k=0;k<n;k++){
+	    sum=sum+arr[k];
+	    if(ans<sum){
+	        ans=sum;
+	    }
+	    if(sum<0){
+	        sum=0;
+	    }
+	}
+	return ans;
+    }
+};
+// https://leetcode.com/problems/maximum-subarray/
