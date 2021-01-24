@@ -11,6 +11,9 @@ int main(){
   for(int i=0;i<n;i++) cin>>arr[i];
   
   sort(arr, arr+n);
+  int k;
+  cout<<"enter k "<<endl;
+  cin>>k;
   cout<<"kth smallest "<<arr[k-1]<<endl;
   cout<<"kth largest "<<arr[n-k-1]<<endl;
 
