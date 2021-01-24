@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int n;
+   cin>>n;
+   if(n>0) {
+      while(n%2 == 0) {
+         n/=2;
+      }
+      if(n == 1) {
+         cout<<"Power of 2";
+         cout<<endl;
+      }
+   }
+   if(n == 0 || n != 1) {
+      cout<<"Not power of 2";
+      cout<<endl;
+   }
+   return 0;
+}

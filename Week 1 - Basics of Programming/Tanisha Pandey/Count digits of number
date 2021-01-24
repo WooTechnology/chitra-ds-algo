@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, n1, num = 0;
+    cin >> n;
+    n1 = n; 
+    while (n != 0)
+    {
+        n /= 10; 
+        num++; 
+    }
+
+    cout << "The number of digits in " << n1 << " : " << num;
+    cout << endl;
+
+    return 0;
+}

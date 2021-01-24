@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, reversedNum = 0, rem;
+    cin >> n;
+
+    while(n != 0) {
+        rema = n%10;
+        reversedNum = reversedNum*10 + rem;
+        n /= 10;
+    }
+
+    cout << reversedNum;
+
+    return 0;
+}
