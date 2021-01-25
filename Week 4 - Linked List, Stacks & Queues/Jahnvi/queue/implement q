@@ -1,0 +1,96 @@
+#include<iostream>
+#define max 100
+using namespace std;
+
+class queues{
+private:
+	int rear;
+	int front;
+	int queue[max];
+
+public:
+
+	queues(){
+		front=-1;
+		rear=-1;
+		for(int i=0;i<max;i++) {
+			queue[i]=0;
+		}
+	}
+
+	bool isempty(){
+	if(rear== -1 && front== -1) return true;
+	else return false;
+}
+bool isfull(){
+	if(rear==max-1) return true;
+	else return false;
+}
+
+	void enqueue(int val){
+		if(isfull()) cout<<"overflow"<<endl;
+
+		else if(isempty()){
+	front=0;
+    rear++;
+	queue[rear]=val;
+}	
+else{
+rear++;
+queue[rear]=val;
+}
+}
+
+int dequeue() {
+    int x = 0;
+    if (isempty()) {
+      cout << "Queue is Empty" << endl;
+      return x;
+    } else if (rear == front) {
+      x = queue[rear];
+      rear = -1;
+      front = -1;
+      return x;
+    } else {
+      cout << "front value: " << front << endl;
+      x = queue[front];
+      queue[front] = 0;
+      front++;
+      return x;
+}
+
+}
+
+
+
+int total_ele (){
+	return (rear-front+1);
+}
+
+void display(){
+	int n=total_ele();
+	for(int i=0;i<n;i++){
+		cout<<queue[i]<<endl;
+}
+}
+};
+
+int main()
+{   
+	queues q;
+	int n;
+	q.enqueue(10);
+	q.enqueue(20);
+	q.enqueue(30);
+	q.enqueue(40);
+	q.enqueue(50);
+	q.enqueue(60);
+	q.display();
+	
+	cout<<endl<<endl;
+	
+	q.dequeue();
+
+	q.display();
+	
+}
