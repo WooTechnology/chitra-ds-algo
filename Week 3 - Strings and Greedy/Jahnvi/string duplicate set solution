@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	string str;
+    cin>>str;  
+   int n= str.size();
+     int f=0;
+
+    unordered_set<char> dups;
+
+    for(auto i:  str){
+        if(dups.find(i) == dups.end()){
+            //dup ni h
+            dups.insert(i);
+            f=1;
+        }
+        else{
+            
+            cout<<"Duplicate found"<<endl;
+            
+        }
+    }
+     if(f==1) cout<<"duplicate not found"<<endl;
+     
+	return 0; 
+} 
