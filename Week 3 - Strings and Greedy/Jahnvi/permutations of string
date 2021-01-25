@@ -1,0 +1,39 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+void permutationCheck(string str, int start, int end){
+    if(start==end){
+        cout<<str<<" ";
+    }
+    
+    else{
+        for(int i= start; i<=end; i++){
+            char temp1 = str[start];
+            str[start]=str[i];
+            str[i]=temp1;
+            
+            permutationCheck(str, start+1, end);
+            
+            char temp2 = str[start];
+            str[start]=str[i];
+            str[i]=temp2;
+        }
+        
+    }
+    
+}
+
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--){
+	    string str;
+	    cin>>str;
+	    permutationCheck(str,0,str.size()-1);
+	    cout<<endl;
+	}
+	return 0;
+}
