@@ -1,0 +1,25 @@
+#include <iostream>
+#include<string>
+using namespace std;
+int main() {
+    string str;
+    cin>>str;
+
+    int start=0, end= str.size()-1;
+    int f=0;
+    while(start<end){
+        if(str[start]==str[end]){
+            f=1;
+            start++;
+            end--;
+        }
+        else {
+            f=0;
+            break;
+        }
+    }
+    if(f==1){
+        cout<<"a palindrome "<<endl;
+    }
+    else cout<<"not a palindrome "<<endl;
+}

@@ -1,0 +1,27 @@
+class stack{
+	private:
+		int top;		
+	public:
+		stack(){
+			int top=-1;
+			int arr[100];
+		}
+			
+    bool isempty(){
+    	if(top==-1) return true;
+    	else return false;
+	}
+				
+	bool isfull(){
+    	if(top==max-1) return true;
+    	else return false;
+	}
+	
+	void push(int val){
+		if(isfull()==true) cout<<"overflow "<<endl;
+		else{
+			top++;
+			stack[top]=val;
+		}
+	}
+};

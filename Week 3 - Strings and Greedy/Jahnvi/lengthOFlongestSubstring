@@ -1,0 +1,34 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+
+bool different_Char(string str, int i, int j) 
+{ 
+
+	vector<bool> visited(26); 
+	for (int k = i; k <= j; k++) { 
+		if (visited[str[k] - 'a'] == true) 
+			return false; 
+		visited[str[k] - 'a'] = true; 
+	} 
+	return true; 
+} 
+
+int longestSubstring(string str) 
+{ 
+	int n = str.size(); 
+	int res = 0; 
+	for (int i = 0; i < n; i++) 
+		for (int j = i; j < n; j++) 
+			if (different_Char(str, i, j)) 
+				res = max(res, j - i + 1); 
+	return res; 
+} 
+
+int main() 
+{ 
+	string str;
+    cin>>str;  
+	int len = longestSubstring(str); 
+	cout << "The length is "<< len<<endl; 
+	return 0; 
+} 

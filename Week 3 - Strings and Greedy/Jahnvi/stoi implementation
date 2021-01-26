@@ -1,0 +1,12 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	string str;
+    cin>>str;  
+    int n= stoi(str);
+    cout<<n;
+
+	return 0; 
+} 
