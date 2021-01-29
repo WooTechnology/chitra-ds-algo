@@ -1,0 +1,34 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+	vector<int>arr;
+	int temp,n;
+	cin >> n;
+
+	int maxNum = INT_MIN;
+	int minNum = INT_MAX;
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> temp;
+		arr.push_back(temp);
+		
+		if (arr[i] < minNum)
+		{
+			minNum = arr[i];
+		}
+		else
+		{
+			maxNum = arr[i];
+		}
+	}
+
+	cout << "maximum" << maxNum << endl;
+	cout << "minimum" << minNum << endl;
+
+
+	return 0;
+}
