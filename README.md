@@ -36,7 +36,7 @@ Basic knowledge of C++ is required.
 - [GeeksForGeeks](https://www.geeksforgeeks.org/)
 - [Hackerearth](https://www.hackerearth.com/)
 - [Hackerrank](https://www.hackerrank.com/)
-- [Ctriver sde sheet]()
+- [Striver SDE sheet]()
 - [Love babbar sheet](https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view)
 - [Interview bit](https://www.interviewbit.com/)
 - [Codeforces](https://codeforces.com/)
