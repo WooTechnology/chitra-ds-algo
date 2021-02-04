@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool subArray(int arr[], int n)
+{
+	unordered_set<int> zerosum;
+	int sum = 0;
+	for (int i = 0; i < n; i++) 
+	{
+		sum += arr[i];
+		if (sum == 0 || zerosum.find(sum) != zerosum.end())
+			return true;
+
+		zerosum.insert(sum);
+	}
+	return false;
+}
+
+int main()
+{
+  int n;
+  cin>>n;
+  int arr[n];
+  for(int i=0;i<n;i++){
+    cin>>arr[i];
+  }
+  
+  if (subArray(arr, n))
+	cout << "subarray with 0 sum exists";
+  else
+	cout << "no subarray with 0 sum";
+    
+	return 0;
+}

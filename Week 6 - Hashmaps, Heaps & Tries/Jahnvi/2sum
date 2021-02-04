@@ -1,0 +1,19 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        //unordered map 
+        //O(n) solution
+        unordered_map<int,int> mp;
+        int diff;
+        
+        for(int i=0;i<nums.size();i++){
+            diff=target-nums[i]; //check the difference between taget sum and the element in hand
+            if(mp.find(diff)!=mp.end()){
+                return {i, mp[diff]}; //if difference already exists in map, return pair
+            }
+            mp[nums[i]]=i;
+            
+        }
+        return {}; //else return null vector, no pair found
+    }
+};
