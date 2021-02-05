@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int knapsack(int val[], int wt[], int n, int W, int t[][102]){
+    if(n==0 || W==0) return 0;
+    if(t[n][W]!= -1) return t[n][W];
+    if(wt[n-1]>W) {
+        t[n][W]=knapsack(val, wt, n-1, W,t);
+        return t[n][W];
+    }
+    
+    t[n][W]=max(knapsack(val, wt, n-1, W,t), val[n-1]+knapsack(val, wt, n-1, W-wt[n-1],t));
+    return t[n][W];
+}
+
+int main() {
+    int t[102][102];
+    memset(t, -1, sizeof(t));
+    int val[] = { 60, 100, 120 };
+    int wt[] = { 10, 20, 30 };
+    int W = 50;
+    int n=3;
+    cout<<knapsack(val,wt,n,W,t);
+}
