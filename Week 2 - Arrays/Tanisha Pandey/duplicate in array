@@ -1,0 +1,39 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+        vector<int>nums;
+        unordered_map<int, int> numFreq;
+        unordered_map<int, int> :: iterator itr;
+        
+        int n = nums.size();
+        
+        for(int i=0;i<n;i++)
+        {
+            if(numFreq.find(nums[i]) != numFreq.end())
+            {
+                itr = numFreq.find(nums[i]);
+                itr->second++;
+            }
+            
+            else
+            {
+                numFreq[nums[i]]= 1;
+            }
+        }
+        
+
+        for(itr=numFreq.begin(); itr != numFreq.end(); itr++)
+        {
+            if(itr->second != 1)
+            {   
+                return true;
+            }    
+    
+        }
+        
+        return false;
+        
+}
