@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void printSubsequences(string str, int start, int end, string curStr = ""){
+	if (start == end) {
+		return;
+	}
+	cout<<curStr<< "  ";
+	for (int i = start + 1; i< end; i++) {
+		curStr += str[i];
+		printSubsequences(str, i, end, curStr);
+		curStr = curStr.erase(curStr.size() - 1);
+	}
+}
+
+int main(){
+	string s;
+
+	cout<< "Enter string : ";
+	cin>> s;
+	int len = s.size();
+  
+	printSubsequences(s, -1, len);
+	
+	return 0;
+}
